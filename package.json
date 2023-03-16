@@ -48,9 +48,6 @@
   "main": "dist/generate-template-files.cjs.js",
   "module": "dist/generate-template-files.esm.js",
   "types": "dist/types/index.d.ts",
-  "files": [
-    "dist/"
-  ],
   "dependencies": {
     "colors": "1.4.0",
     "enquirer": "2.3.6",

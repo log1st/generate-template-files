@@ -186,6 +186,10 @@ export default class GenerateTemplateFiles {
         name: StringUtility.isString(item) ? item : item.slot,
         message: StringUtility.isString(item) ? `Replace ${item} with` : item.question,
         validate: (replacerSlotValue: string) => {
+          if (!StringUtility.isString(item) && item.optional) {
+            return true;
+          }
+
           const isValid: boolean = Boolean(replacerSlotValue.trim());
 
           return isValid || 'You must provide an answer.';
